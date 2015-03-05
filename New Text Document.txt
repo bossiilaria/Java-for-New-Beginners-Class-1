@@ -1,0 +1,36 @@
+
+public class BeerSinger {
+	int numberOfBottles = 99;
+	
+	public void sing(){
+		String b = " bottles ";
+		
+		while (numberOfBottles > 0){
+			System.out.println(numberOfBottles + b + "of beer on the wall");
+			System.out.println(numberOfBottles + b + "of beer");
+			System.out.println("Take one down, pass it around,");
+			numberOfBottles = numberOfBottles - 1;
+			
+			if (numberOfBottles == 1){
+				b = " bottle ";
+			} else if (numberOfBottles == 0){
+				System.out.println("No more bottles of beer on the wall");
+				return; // break; // either works to end our song
+			} // end if
+			
+			System.out.println(numberOfBottles + b + "of beer on the wall\n");
+		} // end while
+	} // end sing()
+
+	public int getNumberOfBottles() {
+		return numberOfBottles;
+	}
+
+	public void setNumberOfBottles(int numberOfBottles) {
+		this.numberOfBottles = numberOfBottles;
+	}
+}
+
+
+
+
